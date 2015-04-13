@@ -7,11 +7,11 @@ require "ng_template/version"
 Gem::Specification.new do |s|
   s.name        = "ng_template"
   s.version     = NgTemplate::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of NgTemplate."
-  s.description = "TODO: Description of NgTemplate."
+  s.authors     = ["Kari Ikonen"]
+  s.email       = ["mr.kari.ikonen@gmail.com"]
+  s.homepage    = "https://github.com/kikonen/ng_template"
+  s.summary     = "AngularJS template handler for Rails"
+  s.description = "Manage AngularJS templates as HTML partials"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
