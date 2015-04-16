@@ -13,8 +13,7 @@ module TemplateHelper
       @view_ctx = view_ctx
       @paths = Array(paths)
       @opt = {
-        mode: Rails.configuration.ng_template.mode,
-        prefix: Rails.configuration.ng_template.prefix,
+        prefix: '_ng_',
       }.merge!(opt)
     end
 
@@ -46,8 +45,9 @@ module TemplateHelper
       Dir["#{view_path}/#{path}/#{@opt[:prefix]}*.html*"].map do |file_path|
         name = File.basename(file_path)
         partial_name = path + "/" + name[1, name.index('.') - 1]
+        template_name = path + "/" + name[@opt[:prefix].length..(name.index('.') - 1)]
         {
-          name: partial_name,
+          name: template_name,
           content: render_template(partial_name),
         }
       end
@@ -63,10 +63,10 @@ module TemplateHelper
   end
 
   #
-  # Render all templates in given path
+  # Render all templates in given path as HTML
   #
-  def ng_template_include(paths)
-    TemplateRenderer.new(self, paths).render
+  def ng_template_include(paths, opt = {})
+    TemplateRenderer.new(self, paths, opt).render
   end
 end
 end
