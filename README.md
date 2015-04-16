@@ -9,3 +9,7 @@ This a bit similar gem to (angular-rails-templates)[https://github.com/pitr/angu
 app/views/some/ui/show.html.erb:
 
     <%= ng_template_include 'some/path' %>
+
+    OR
+
+    <%= ng_template_include 'some/path', prefix: '_some_prefix_' %>
