@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.1.10'
+gem 'sass-rails', '~> 4.0.3'
+
+# various misc useful utilities
+gem 'pry-rails'
+gem 'awesome_print'
+gem 'pry-byebug'
+
+gem 'rspec-rails'
+gem 'rack-test'
