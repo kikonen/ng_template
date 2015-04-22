@@ -1,7 +1,7 @@
 PATH
   remote: ../..
   specs:
-    ng_template (0.0.1)
+    ng_template (0.0.2)
       rails (~> 4.1.10)
 
 GEM
